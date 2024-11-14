@@ -13,9 +13,9 @@ public class Main {
             System.out.println("File not found");
 
         }
-        String path = "D:/";
-        //String path = System.getProperty("user.dir");
-        //scan(path);
+        //String path = "D:/";
+        String path = System.getProperty("user.dir");
+        scan(path);
 
         /*
         Scanner input = new Scanner(System.in);
@@ -46,15 +46,15 @@ public class Main {
             for (File f : files) {
                 if (f.isDirectory()) {
                     ++ depth;
-                    for (int i = 0; i < depth; ++ i){
-                        System.out.print("-");
+                    for (int i = 0; i < depth - 1; ++ i){
+                        System.out.print("\t");
                     }
                     System.out.println(f.getName() + ":");
                     scan(f.getPath());
                     depth--;
                 } else {
                     for (int i = 0; i < depth; ++ i){
-                        System.out.print("-");
+                        System.out.print("\t");
                     }
                     System.out.println(f.getName());
                 }
