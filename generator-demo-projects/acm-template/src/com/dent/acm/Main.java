@@ -15,22 +15,25 @@ public class Main {
             System.out.println("File not found");
 
         }*/
-        boolean flag = false;
+
         String path = args[0];
-        String output = args[0] + "1" + ".txt";
+        String output = args[0] + "_Scan_" + ".txt";
         File file = new File(output);
         if (!file.exists()) {
-            flag = file.createNewFile();
+            file.createNewFile();
         }
-        if (flag) {
-            BufferedWriter writer = new BufferedWriter(new FileWriter(file));
+        if (file.exists()) {
+            file.delete();
+            file.createNewFile();
+        }
+        BufferedWriter writer = new BufferedWriter(new FileWriter(file));
 
-            //System.getProperty("user.dir");
-            //"D:/";
-            //String path = System.getProperty("user.dir");
-            scan(path, writer);
-            writer.close();
-        }
+        //System.getProperty("user.dir");
+        //"D:/";
+        //String path = System.getProperty("user.dir");
+        scan(path, writer);
+        writer.close();
+
 
 
         /*
