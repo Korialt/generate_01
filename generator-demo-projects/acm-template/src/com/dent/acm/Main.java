@@ -4,18 +4,10 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Scanner;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+// pending for copy function
 public class Main {
     public static int depth = 0;
     public static void main(String[] args) throws IOException {
-        //"C:/Users/Dent/dentcode/"
-        /*File file = new File("./D.txt");
-        if (!file.exists()) {
-            System.out.println("File not found");
-
-        }*/
-
         String path = args[0];
         String output = args[0] + "_Scan_" + ".txt";
         File file = new File(output);
@@ -28,20 +20,9 @@ public class Main {
         }
         BufferedWriter writer = new BufferedWriter(new FileWriter(file));
 
-        //System.getProperty("user.dir");
-        //"D:/";
-        //String path = System.getProperty("user.dir");
         scan(path, writer);
         writer.close();
 
-
-
-        /*
-        Scanner input = new Scanner(System.in);
-        int n = input.nextInt();
-        int ans;
-        ans = hanoi('A', 'B', 'C', n);
-        System.out.println(ans);*/
     }
     static void show(char from, char to) {
         System.out.printf("Moving From " + from + " to " + to + '\n');
