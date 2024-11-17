@@ -8,8 +8,9 @@ import java.util.Scanner;
 public class Main {
     public static int depth = 0;
     public static void main(String[] args) throws IOException {
-        String path = args[0];
-        String output = args[0] + "_Scan_" + ".txt";
+        String arg = "D:\\PDF书籍";
+        String path = arg;
+        String output = arg + "_Scan_" + ".txt";
         File file = new File(output);
         if (!file.exists()) {
             file.createNewFile();
@@ -64,7 +65,7 @@ public class Main {
                         writer.write("\t");
                     }
                     System.out.println(f.getName() + " " + f.length() + " Byte(s) " + f.lastModified());
-                    writer.write(f.getName() + " " + f.length() + " Byte(s)" + "\n");
+                    writer.write(f.getName() + "\n");
                 }
             }
         }
