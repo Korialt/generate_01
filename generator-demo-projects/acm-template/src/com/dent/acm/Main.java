@@ -74,6 +74,7 @@ public class Main {
                         }
                         System.out.println(f.getName() + " " + f.length() + " Byte(s) " + f.lastModified());
                         writer.write(f.getName() + "\n");
+                    }
                     * */
                 }
 
@@ -81,5 +82,5 @@ public class Main {
         }
     }
 }
-}
+
 
