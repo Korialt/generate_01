@@ -66,9 +66,20 @@ public class Main {
                     }
                     System.out.println(f.getName() + " " + f.length() + " Byte(s) " + f.lastModified());
                     writer.write(f.getName() + "\n");
+                    /*
+                    if (f.getName().toLowerCase().contains("rust")) {
+                        for (int i = 0; i < depth; ++ i){
+                            System.out.print("\t");
+                            writer.write("\t");
+                        }
+                        System.out.println(f.getName() + " " + f.length() + " Byte(s) " + f.lastModified());
+                        writer.write(f.getName() + "\n");
+                    * */
                 }
+
             }
         }
     }
+}
 }
 
